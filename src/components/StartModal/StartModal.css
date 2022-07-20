@@ -1,0 +1,29 @@
+.start-modal__the-loc-nar {
+    object-fit: cover;
+}
+
+.inactive {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.start-modal {
+    height: 75vh;
+    width: 50vw;
+    position: absolute;
+    background-color: white;
+}
+
+.start-modal__image {
+    height: 8rem;
+}
+
+.start-modal__element,
+.start-modal__button {
+    transition: 0.2s;
+}
+
+.start-modal__element:hover,
+.start-modal__button:hover {
+    transform: scale(1.1);
+}
