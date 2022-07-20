@@ -14,46 +14,48 @@ function StartModal() {
 
   return (
     <div
-      className="start-modal m-5 d-flex justify-content-center align-items-center"
+      className="start-modal h-100 w-100 d-flex align-items-center justify-content-center"
       ref={myRef}
     >
-      <img
-        className="start-modal__the-loc-nar w-100 h-100"
-        src={theLocNar}
-        alt="The Loc Nar"
-      />
-      <span className="d-flex flex-column align-items-center justify-content-center p-4 gap-3">
-        <h2 className="text-dark">The Loc Nar</h2>
-        <small className="text-dark">By Egor Kluchnyk</small>
-        <StartModalElement
-          difficulty="Easy"
-          imgSrc={bowser}
-          imgAlt="Bowser"
-          name="Bowser"
-          source="Super Mario Bros"
+      <div className=" m-5 d-flex justify-content-center align-items-center">
+        <img
+          className="start-modal__the-loc-nar w-100 h-100"
+          src={theLocNar}
+          alt="The Loc Nar"
         />
-        <StartModalElement
-          difficulty="Medium"
-          imgSrc={stewie}
-          imgAlt="Stewie"
-          name="Stewie"
-          source="Family Guy"
-        />
-        <StartModalElement
-          difficulty="Hard"
-          imgSrc={knight}
-          imgAlt="The Knight"
-          name="The Knight"
-          source="Hollow Knight"
-        />
-        <button
-          className="start-modal__button text-light bg-dark rounded border-0 outline-0 px-4 py-2"
-          type="button"
-          onClick={onStart}
-        >
-          Start
-        </button>
-      </span>
+        <span className="d-flex flex-column align-items-center justify-content-center p-4 gap-3">
+          <h2 className="text-dark">The Loc Nar</h2>
+          <small className="text-dark">By Egor Kluchnyk</small>
+          <StartModalElement
+            difficulty="Easy"
+            imgSrc={bowser}
+            imgAlt="Bowser"
+            name="Bowser"
+            source="Super Mario Bros"
+          />
+          <StartModalElement
+            difficulty="Medium"
+            imgSrc={stewie}
+            imgAlt="Stewie"
+            name="Stewie"
+            source="Family Guy"
+          />
+          <StartModalElement
+            difficulty="Hard"
+            imgSrc={knight}
+            imgAlt="The Knight"
+            name="The Knight"
+            source="Hollow Knight"
+          />
+          <button
+            className="start-modal__button text-light bg-dark rounded border-0 outline-0 px-4 py-2"
+            type="button"
+            onClick={onStart}
+          >
+            Start
+          </button>
+        </span>
+      </div>
     </div>
   )
 }

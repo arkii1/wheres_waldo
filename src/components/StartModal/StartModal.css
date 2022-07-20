@@ -8,9 +8,13 @@
 }
 
 .start-modal {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.start-modal > div {
     height: 75vh;
     width: 50vw;
-    position: absolute;
     background-color: white;
 }
 
