@@ -73,7 +73,11 @@ function GameImage({
   }
 
   return (
-    <div className="game-image" onClick={handleImageClick} ref={imgRef}>
+    <div
+      className="game-image d-flex flex-column align-items-center gap-1"
+      onClick={handleImageClick}
+      ref={imgRef}
+    >
       {openSnackbar && <Snackbar bg={snackbar.bg} text={snackbar.text} />}
       {menuOpen && (
         <ContextMenu
@@ -85,7 +89,9 @@ function GameImage({
       )}
       <img src={imageSrc} alt={imageAlt} />
 
-      <a href={imageAuthorLink}>{imageAuthorText}</a>
+      <a className="p-3 text-light" href={imageAuthorLink}>
+        {imageAuthorText}
+      </a>
     </div>
   )
 }
