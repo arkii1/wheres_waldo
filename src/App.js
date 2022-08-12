@@ -116,7 +116,8 @@ function App() {
         list={itemArr}
         imageSrc={TheLocNar}
         imageAlt="The loc nar - a mash of pop culture."
-        imageAuthor="Find out author later"
+        imageAuthorText="Image made by Egor Klyuchnyk"
+        imageAuthorLink="https://www.instagram.com/ad.2.222/"
         toggleFound={toggleFound}
         handleWin={handleWin}
       />
