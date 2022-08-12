@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/wheres_waldo/static/css/main.482efa00.css",
+    "main.js": "/wheres_waldo/static/js/main.ab85c540.js",
+    "static/media/the-loc-nar.jpg": "/wheres_waldo/static/media/the-loc-nar.314cec99f414807b7e27.jpg",
+    "static/media/bowser.png": "/wheres_waldo/static/media/bowser.79c5eb2bbc827836b9d7.png",
+    "static/media/knight.webp": "/wheres_waldo/static/media/knight.b0014b3db7961de88c65.webp",
+    "static/media/stewie.jpg": "/wheres_waldo/static/media/stewie.99a68375733708312e3c.jpg",
+    "index.html": "/wheres_waldo/index.html",
+    "main.482efa00.css.map": "/wheres_waldo/static/css/main.482efa00.css.map",
+    "main.ab85c540.js.map": "/wheres_waldo/static/js/main.ab85c540.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.482efa00.css",
+    "static/js/main.ab85c540.js"
+  ]
+}
