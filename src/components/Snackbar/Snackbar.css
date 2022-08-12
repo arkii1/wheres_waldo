@@ -1,0 +1,16 @@
+.snackbar--red, 
+.snackbar--green {
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.snackbar--green {
+    background: green;
+}
+
+.snackbar--red {
+    background: red;
+}
+

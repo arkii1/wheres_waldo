@@ -1,0 +1,14 @@
+.context-menu {
+    position: absolute;
+}
+
+.context-menu__item {
+    list-style: none;
+    transition: 0.2s;
+}
+
+.context-menu__item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    font-weight: bold;
+}

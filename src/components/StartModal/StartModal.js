@@ -6,24 +6,25 @@ import bowser from "../../assets/bowser.png"
 import stewie from "../../assets/stewie.jpg"
 import knight from "../../assets/knight.webp"
 
-function StartModal() {
+function StartModal({ onClick }) {
   const myRef = useRef(null)
-  const onStart = () => {
+  const start = () => {
     myRef.current.classList.add("inactive")
+    onClick()
   }
 
   return (
     <div
-      className="start-modal h-100 w-100 d-flex align-items-center justify-content-center"
+      className="start-modal d-flex align-items-center justify-content-center"
       ref={myRef}
     >
-      <div className=" m-5 d-flex justify-content-center align-items-center">
+      <div className="m-2 d-flex justify-content-center align-items-center rounded ">
         <img
-          className="start-modal__the-loc-nar w-100 h-100"
+          className="start-modal__the-loc-nar h-100"
           src={theLocNar}
           alt="The Loc Nar"
         />
-        <span className="d-flex flex-column align-items-center justify-content-center p-4 gap-3">
+        <span className="d-flex flex-column align-items-center justify-content-center p-4 gap-3 ">
           <h2 className="text-dark">The Loc Nar</h2>
           <small className="text-dark">By Egor Kluchnyk</small>
           <StartModalElement
@@ -50,7 +51,7 @@ function StartModal() {
           <button
             className="start-modal__button text-light bg-dark rounded border-0 outline-0 px-4 py-2"
             type="button"
-            onClick={onStart}
+            onClick={start}
           >
             Start
           </button>
@@ -58,6 +59,10 @@ function StartModal() {
       </div>
     </div>
   )
+}
+
+StartModal.propTypes = {
+  onClick: propTypes.func,
 }
 
 function StartModalElement({ difficulty, imgSrc, imgAlt, name, source }) {
@@ -71,22 +76,22 @@ function StartModalElement({ difficulty, imgSrc, imgAlt, name, source }) {
     return "text-danger"
   }
   return (
-    <span className="start-modal__element w-100 d-flex flex-column align-items-end justify-content-center">
+    <div className="start-modal__element w-100 d-flex flex-column align-items-end justify-content-center">
       <p className={getDifficultyClass()}>{difficulty}</p>
-      <span className="w-100 d-flex align-items-center justify-content-between gap-3">
+      <div className="w-100 d-flex align-items-center justify-content-between gap-3">
         <img className="start-modal__image" src={imgSrc} alt={imgAlt} />
-        <span className="d-flex flex-column align-items-end justify-content-center">
+        <div className="d-flex flex-column align-items-end justify-content-center">
           <h4 className="text-dark">{name}</h4>
           <small className="text-dark">{source}</small>
-        </span>
-      </span>
-    </span>
+        </div>
+      </div>
+    </div>
   )
 }
 
 StartModalElement.propTypes = {
   difficulty: propTypes.string,
-  imgSrc: propTypes.oneOfType(bowser),
+  imgSrc: propTypes.string,
   imgAlt: propTypes.string,
   name: propTypes.string,
   source: propTypes.string,

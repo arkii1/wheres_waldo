@@ -1,5 +1,25 @@
 .start-modal__the-loc-nar {
     object-fit: cover;
+    /* for some reason rounded-left isn't working */
+    border-radius: 2px 0 0 2px; 
+}
+
+@media screen and (max-width: 499px) {
+    .start-modal__the-loc-nar {
+        width: 16rem;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 999px) {
+    .start-modal__the-loc-nar {
+        width: 12rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .start-modal__the-loc-nar {
+        width: 12rem;
+    }
 }
 
 .inactive {
@@ -8,13 +28,15 @@
 }
 
 .start-modal {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position:fixed ;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* zindex-modal not working */
+    z-index: 1060;
 }
 
 .start-modal > div {
-    height: 75vh;
-    width: 50vw;
     background-color: white;
 }
 

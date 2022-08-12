@@ -1,0 +1,22 @@
+.end-modal {
+    height: 100vh;
+    width: 100vw;
+    position:fixed ;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* zindex-modal not working */
+    z-index: 1060;
+}
+
+.end-modal > div {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    background-color: white;
+    height: max-content;
+    width: max-content;
+}
+
+.end-modal > div > ul > li {
+    list-style-type: none;
+}
