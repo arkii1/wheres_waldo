@@ -8,9 +8,15 @@ import useToggle from "../../hooks/useToggle"
 import "./GameImage.css"
 import Snackbar from "../Snackbar/Snackbar"
 import ContextMenu from "../ContextMenu/ContextMenu"
-import MadeBy from "../MadeBy/MadeBy"
 
-function GameImage({ list, imageSrc, imageAlt, imageAuthorText, imageAuthorLink, toggleFound }) {
+function GameImage({
+  list,
+  imageSrc,
+  imageAlt,
+  imageAuthorText,
+  imageAuthorLink,
+  toggleFound,
+}) {
   const [menuOpen, toggleMenuOpen] = useToggle(false)
   const [menuCoords, setMenuCoords] = useState({ x: 0, y: 0 })
   const [snackbar, openSnackbar, setSnackbar, toggleSnackbar] = useSnackbar(
@@ -79,7 +85,7 @@ function GameImage({ list, imageSrc, imageAlt, imageAuthorText, imageAuthorLink,
       )}
       <img src={imageSrc} alt={imageAlt} />
 
-        <a href={imageAuthorLink}>{imageAuthorText}</a>
+      <a href={imageAuthorLink}>{imageAuthorText}</a>
     </div>
   )
 }
@@ -91,6 +97,6 @@ GameImage.propTypes = {
   imageSrc: propTypes.node,
   imageAlt: propTypes.string,
   imageAuthorText: propTypes.string,
-  s: propTypes.string,
+  imageAuthorLink: propTypes.string,
   toggleFound: propTypes.func,
 }
